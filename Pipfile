@@ -10,6 +10,8 @@ djangorestframework = "*"
 drf-nested-routers = "*"
 django-filter = "*"
 psycopg2-binary = "*"
+djoser = "*"
+djangorestframework-simplejwt = "*"
 
 [dev-packages]
 
