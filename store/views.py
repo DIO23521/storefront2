@@ -73,6 +73,10 @@ class CustomerViewSet(ModelViewSet):
     serializer_class = CustomerSerializer
     permission_classes = [IsAdminUser]
 
+    @action(detail=True, permission_classes=[ViewCustomerHistoryPermission])
+    def history(self,request, pk):
+        return Response('ok')
+
     @action(detail=False, methods=['GET','PUT'], permission_classes=[IsAuthenticated])
     def me(self, request):
         
