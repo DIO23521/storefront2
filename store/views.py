@@ -92,7 +92,6 @@ class CustomerViewSet(ModelViewSet):
             return Response(serializer.data)
 
 
-   
-
-
-        
+class OrderViewSet(ModelViewSet):
+    queryset = Order.objects.all()
+    serializer_class = OrderSerializer
